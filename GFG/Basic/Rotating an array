@@ -1,0 +1,22 @@
+Input:
+N = 7
+Arr[] = {1, 2, 3, 4, 5, 6, 7}
+D = 2
+Output: 3 4 5 6 7 1 2
+Explanation: 
+Rotate by 1: [2, 3, 4, 5, 6, 7, 1]
+Rotate by 2: [3, 4, 5, 6, 7, 1, 2]
+
+
+CODE:
+def leftRotate(self, arr, n, d):
+	"""for i in range(d):
+    	   first = arr[0]
+           for j in range(n-1):
+        	   arr[j]=arr[j+1]
+           arr[n-1]=first"""
+            
+	brr=[]
+    brr=arr[d:]+arr[:d]
+    for i in range(n):
+    	arr[i]=brr[i]
