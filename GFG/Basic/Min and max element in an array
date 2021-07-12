@@ -1,0 +1,17 @@
+Input:
+N = 6
+A[] = {3, 2, 1, 56, 10000, 167}
+Output:
+min = 1, max =  10000
+
+
+CODE:
+def getMinMax( a, n):
+    max=a[0]
+    min=a[0]
+    for i in range(n):
+        if (a[i]>max):
+            max=a[i]
+        elif (a[i]<min):
+            min=a[i]
+    return(max,min)
